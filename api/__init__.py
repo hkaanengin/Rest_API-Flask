@@ -30,7 +30,7 @@ def create_app():
     from .user_profiles import User_Create, Multiple_User_Create, User_Profile
     from .leaderboards import Leaderboard, Leaderboard_Country
 
-    redisClient.flushall()
+    
     create_database(app)
 
     api.add_resource(Leaderboard_Country,"/leaderboard/<string:country_code>")
@@ -45,7 +45,6 @@ def create_app():
 
 def create_database(app):
     if not path.exists('api/'+DB_NAME):
-        print(os.listdir())
-        print(os.getcwd())
+        redisClient.flushall()
         db.create_all(app=app)
         print('Created Database!')
