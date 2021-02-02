@@ -8,12 +8,13 @@ import redis
 import rq
 import random
 from os import path
+import os
 
 db = SQLAlchemy()
 DB_NAME="database.db"
-redisClient = redis.StrictRedis(host="redis-19766.c226.eu-west-1-3.ec2.cloud.redislabs.com",port=19766,db=0, password="OPouC22LHDZcuQfGCtAIctWZC3DI5fye")
+#redisClient = redis.StrictRedis(host="redis-19766.c226.eu-west-1-3.ec2.cloud.redislabs.com",port=19766,db=0, password="OPouC22LHDZcuQfGCtAIctWZC3DI5fye")
 
-#redisClient = redis.StrictRedis(host="127.0.0.1",port=6379,db=0)
+redisClient = redis.StrictRedis(host="127.0.0.1",port=6379,db=0)
 def create_app():
 
     app= Flask(__name__)
@@ -41,6 +42,8 @@ def create_app():
     return app
 
 def create_database(app):
-    if not path.exists('api/'+ DB_NAME):
+    if not path.exists('api/'+DB_NAME):
+        print(os.listdir())
+        print(os.getcwd())
         db.create_all(app=app)
         print('Created Database!')
