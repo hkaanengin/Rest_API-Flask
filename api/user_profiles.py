@@ -22,7 +22,7 @@ class User_Create(Resource):
             display_name=args["display_name"]
         elif not args["display_name"]:
             display_name= "some_display_name"
-        country_iso_code=args["country_iso_code"]
+        country_code=args["country_iso_code"]
 
         user_id=str(uuid.uuid4())
         points=0
