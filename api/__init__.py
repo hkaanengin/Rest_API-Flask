@@ -45,6 +45,7 @@ def create_app():
 
 def create_database(app):
     if not path.exists('api/'+DB_NAME):
+        print(os.environ.get("DATABASE_URL"))
         redisClient.flushall()
         db.create_all(app=app)
         print('Created Database!')

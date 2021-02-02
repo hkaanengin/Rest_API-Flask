@@ -19,4 +19,3 @@ class User(db.Model):
     def __repr__(self):
         return f"User(id={id}, display_name={display_name}, country_iso_code={country_iso_code}, points={points}"
 
-
