@@ -14,6 +14,7 @@ db = SQLAlchemy()
 DB_NAME="database.db"
 redisClient = redis.StrictRedis(host="redis-19766.c226.eu-west-1-3.ec2.cloud.redislabs.com",port=19766,db=0, password="OPouC22LHDZcuQfGCtAIctWZC3DI5fye")
 
+
 #redisClient = redis.StrictRedis(host="127.0.0.1",port=6379,db=0)
 def create_app():
 
@@ -29,6 +30,7 @@ def create_app():
     from .user_profiles import User_Create, Multiple_User_Create, User_Profile
     from .leaderboards import Leaderboard, Leaderboard_Country
 
+    redisClient.flushall()
     create_database(app)
 
     api.add_resource(Leaderboard_Country,"/leaderboard/<string:country_code>")
