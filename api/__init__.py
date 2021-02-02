@@ -11,7 +11,7 @@ from os import path
 
 db = SQLAlchemy()
 DB_NAME="database.db"
-redisClient = redis.StrictRedis(host="127.0.0.1",port=6379,db=0)
+redisClient = redis.StrictRedis(host="redis-19766.c226.eu-west-1-3.ec2.cloud.redislabs.com",port=19766,db=0, password="OPouC22LHDZcuQfGCtAIctWZC3DI5fye")
 
 def create_app():
 
