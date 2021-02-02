@@ -8,6 +8,9 @@ from . import db
 from .models import User
 from . import redisClient
 
+'''Since you have not specified how many people should "/Leaderboard" endpoint return, I thought 20 would be a good number. If you want to increase the amount,
+    please do change the "0,19" parameters to your liking in each Leaderboard class(Leaderboar&Leaderboard_Country).'''
+    
 class Leaderboard(Resource):
     def get(self):
 

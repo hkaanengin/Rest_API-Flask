@@ -7,6 +7,8 @@ import uuid
 from . import db
 
 
+'''DB Model is created here. Since ids should be unique, instead of identifying each user with a number, I have set it up so they are represented by their user_guid.
+    every other parameter can be nullable.'''
 class User(db.Model):
     __tablename__='users'
     #id = db.Column(db., primary_key=True)

@@ -9,6 +9,7 @@ from .models import User
 from datetime import datetime
 from . import redisClient
 
+'''This .py is about Score submissions. The details about response type/body for each Endpoint is specified in README1.txt file.'''
 
 class Score_Submit(Resource):
     def __init__(self):

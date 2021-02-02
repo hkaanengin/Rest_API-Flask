@@ -9,6 +9,7 @@ from .models import User
 from . import redisClient
 import random
 
+'''This .py is about the User creating and user profiles. The details about response type/body for each Endpoint is specified in README1.txt file.'''
 
 class User_Create(Resource):
     def __init__(self):

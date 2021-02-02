@@ -14,8 +14,17 @@ db = SQLAlchemy()
 DB_NAME="database.db"
 redisClient = redis.StrictRedis(host="redis-19766.c226.eu-west-1-3.ec2.cloud.redislabs.com",port=19766,db=0, password="OPouC22LHDZcuQfGCtAIctWZC3DI5fye")
 
+'''I decided to use Redis for Leaderboards. I thought that, making SQLite to sort thousands of user by their score point, would take too much time.
+    Redis seemed working quite good on such sorting purposes. I have also bought a cloud with Redis server so that my app would work on it.
+    15th line is to connect the cloud server I have bought.'''
 
+
+
+#This line of code is here to test the script on my local Redis server.
 #redisClient = redis.StrictRedis(host="127.0.0.1",port=6379,db=0)
+
+
+''''This is the init script. I get whole script up running here. Creating app, DB, endpoints etc.''''
 def create_app():
 
     app= Flask(__name__)
