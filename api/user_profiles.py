@@ -27,7 +27,7 @@ class User_Create(Resource):
         user_id=str(uuid.uuid4())
         points=0
 
-        user = User(id=user_id, display_name=display_name,country_iso_code=country_iso_code,points=points)
+        user = User(id=user_id, display_name=display_name,country_iso_code=country_code,points=points)
 
         score_dict={user.id:user.points}
         redisClient.zadd("Leaderboard",score_dict)

@@ -16,6 +16,8 @@ class Leaderboard(Resource):
         for ele_concat in sorted_list:
             user_guid=str(ele_concat).split("'")[1]
             result=User.query.filter_by(id=user_guid).first()
+            if not result:
+                continue
             display_name=result.display_name
             country_name=result.country_iso_code
             user_total_points=result.points
