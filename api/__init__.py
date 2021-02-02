@@ -24,7 +24,7 @@ redisClient = redis.StrictRedis(host="redis-19766.c226.eu-west-1-3.ec2.cloud.red
 #redisClient = redis.StrictRedis(host="127.0.0.1",port=6379,db=0)
 
 
-''''This is the init script. I get whole script up running here. Creating app, DB, endpoints etc.''''
+'''This is the init script. I get whole script up running here. Creating app, DB, endpoints etc.'''
 def create_app():
 
     app= Flask(__name__)
