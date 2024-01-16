@@ -1,7 +1,7 @@
 venv
 __pycache__
-/Procfile
+__pycache__/
 Procfile
 /.vscode
 .vscode
-/__pycache__/
+__init__.py
