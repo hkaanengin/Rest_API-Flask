@@ -1,12 +1,8 @@
 from flask import Flask
-from flask_restful import Api, Resource, reqparse, abort, fields, marshal_with
+from flask_restful import Api
 from sqlalchemy.dialects.postgresql import UUID
 from flask_sqlalchemy import SQLAlchemy
-from flask import request
-import uuid
 import redis
-import rq
-import random
 from os import path
 import os
 
