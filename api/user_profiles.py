@@ -1,12 +1,9 @@
-from flask import Flask
-from flask_restful import Api, Resource, reqparse, abort, fields, marshal_with
+from flask_restful import Api, Resource, reqparse, abort
 from sqlalchemy.dialects.postgresql import UUID
-from flask_sqlalchemy import SQLAlchemy
 from flask import request
 import uuid
-from . import db
+from . import db, redisClient
 from .models import User
-from . import redisClient
 import random
 
 '''This .py is about the User creating and user profiles. The details about response type/body for each Endpoint is specified in README1.txt file.'''
