@@ -48,7 +48,7 @@ The whole script has been deployed on a Heroku server(Free Tier) with Redis. It 
 
 You can send your requests to: 
 ```bash
-https://gjg-restapi.herokuapp.com**<endpoint>
+https://gjg-restapi.herokuapp.com<endpoint>
 ```
 
 For example:
