@@ -1,4 +1,4 @@
-from flask_restful import Api, Resource, reqparse, abort
+from flask_restful import Resource, reqparse, abort
 from sqlalchemy.dialects.postgresql import UUID
 from flask import request
 import uuid
