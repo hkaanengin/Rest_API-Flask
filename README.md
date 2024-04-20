@@ -17,7 +17,7 @@ it immediately ranks its players by their scores, acting as a real-time sorting 
 Each player has a unique identifier(uuid), username(display_name), country(country iso code) and score. You can create one/multiple players(s), have a look at 
 player' profiles, update one/multiple player(s)' score and display the leaderboard either globally or country specificly by using the endpoints which are explained in detail below.
 
-For this project, I used FLASK to take care of creating the API services, SQLAlchemny to handle the database and Heroku as the cloud service to host my API.
+For this project, I used FLASK to take care of creating the API services, SQLAlchemy to handle the database and Heroku as the cloud service to host my API.
 
 ## Endpoints
 
