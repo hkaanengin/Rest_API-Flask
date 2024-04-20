@@ -51,7 +51,7 @@ You can send your requests to:
 https://gjg-restapi.herokuapp.com<endpoint>
 ```
 
-For example:
+Example request:
 ```bash
 https://gjg-restapi.herokuapp.com/leaderboard
 ```
