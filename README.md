@@ -37,10 +37,10 @@ Following endpoints are exposed to be used:
 | ----------- | ----------- | --- |
 | **/leaderboard** | GET   | NONE(EMPTY REQUEST)|
 | **/leaderboard/{country_iso_code}**   | GET | NONE(EMPTY REQUEST) |
-| **/score/create** | POST | {"display_name":display_name, "country_iso_code":country_iso_code}|
+| **/score/create** | POST | {"display_name":Hasan, "country_iso_code":tr}|
 | **/score/create/multiple**| POST        | {"amount":1000} |
-| **/user/submit** | POST  | {"user_guid":user_guid, "score_worth":score_worth}|
-| **/user/submit/multiple** | POST  | [{"user_guid":user_guid, "score_worth":score_worth},{"user_guid":user_guid, "score_worth":score_worth}, ...] |
+| **/user/submit** | POST  | {"user_guid":550e8400-e29b-41d4-a716-446655440000, "score_worth":200}|
+| **/user/submit/multiple** | POST  | [{"user_guid":550e8400-e29b-41d4-a716-446655440000, "score_worth":200},{"user_guid":32fd8122-e32k-65k4-ei21-412340023, "score_worth":100}, ...] |
 | **/user/profile/{user_guid}** | GET  | NONE(EMPTY REQUEST) |
 
 ## Heroku Server
